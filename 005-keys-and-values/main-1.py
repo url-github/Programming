@@ -11,9 +11,16 @@ if 4 in L:
 else:
 	print('nie')
 
+print("###")
+
 D = {123456789:'Jan Kot', 999888777:'Anna Lis', 111222333:'Jan Kot'}
 
 print(D[123456789]) # odczytanie elementu słownika D znajdującego się pod kluczem 123456789
 
 # złożoność obliczeniowa wyszukania elementu w liście N-elementowej: O(N)
 # złożoność obliczeniowa wyszukania elementu w słowniku N-elementowym: O(1) - lepsza!
+
+print("###")
+
+D = {'imie': 'Anna', 'imie': 'Karolina', 'imie': 'Żaneta'}
+print(D)
