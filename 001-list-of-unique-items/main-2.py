@@ -1,39 +1,13 @@
-a = "abcdefg"
-print(a[1])
-# a[1] = "X" # stringi są niemutowalne, co oznacza, że nie można zmieniać ich zawartości bezpośrednio.
+# Pytanie 2 - co się stanie po wykonaniu poniższego kodu?
 
-print("###")
+a = "abcdefg"            # do zmiennej a przypisz zostaje string 'abcdefg'
+print(a[1])              # wydrukuj element znajdujący się pod indeksem 1 w stringu a
+# a[1] = 'X'             # próba modyfikacji stringa - operacja zabroniona skutkująca TypeError
 
-a = list("abcdefg")
-a[1] = "X"
-result = "".join(a)
-print(result)
-
-print("###")
-
-a = 'abcdefg'
-print(id(a))
-a_lista = list(a)
-a_lista[1] = 'X'
-a = ''.join(a_lista)
-print(id(a))
-
-print("###")
-
-b = ['a', 'b', 'c', 'd', 'e']
-print(id(b))
-b[1] = "Y"
-print(id(b))
-
-print("###")
-
-c = ['a', 'b', 'c', 'd', 'e']
-print(id(c))
-print(type(c))
-c[1] = "Y"
-result = ''.join(c)
-print(id(result))
-print(type(result))
+a_lista = list(a)        # stwórz listę a_lista zawierającą litery ze stringa a
+a_lista[1] = 'X'         # zmodyfikuj zawartość listy pod indeksem 1 - listy są obiektami, które można modyfikować
+a = "".join(a_lista)     # stwórz stringa a łącząc elementy listy a_lista przy użyciu pustego separatora ""
+print(a)
 
 
 # int, float, bool, str, tuple, frozenset - obiekty niezmienne

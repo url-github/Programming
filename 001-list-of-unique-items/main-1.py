@@ -1,23 +1,14 @@
-A = [1,2,3,3,4,1,2,3]
+# Pytanie 1 - lista niepowtarzalnych elementów
+# Korzystając z podanej listy A
+# stwórz listę B zawierającą tylko unikalne elementy z listy A
 
-B = []
+A = [1,2,3,3,2,1,2,3] # -> B = [1,2,3]
 
-for element in A:
-	if element not in B:
-		B.append(element) # to metoda obiektu typu lista w Pythonie. Metody w Pythonie to funkcje, które są wywoływane na obiektach i mogą zmieniać stan obiektu lub wykonywać operacje z nim związane.
+B = []                      # stwórz pustą listę B
+for element in A:           # dla kolejnego elementu w liście A
+    if element not in B:    # jeśli element nie znajduje się w liście B
+        B.append(element)   # dodaj ten element do listy B
+print(B)                    # wydrukuj listę B
+
+B = list(set(A))            # stwórz listę B na podstawie setu stworzonego na podstawie listy A
 print(B)
-
-##
-
-B = list(set(A))
-print(B)
-
-##
-
-A = [1, 2, 3, 4, 3, 2, 3, 4, 5, 6, 7, 5, 43, 4, 6]
-
-def countUniqueElements(user_list):
-    print(len(set(A)))
-
-
-countUniqueElements(A)

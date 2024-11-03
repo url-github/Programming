@@ -1,20 +1,13 @@
-szafka = [ [[], [], []],[[], [], []],[[], [], []] ]
+# Pytanie 4 - jakiej struktury danych użyłbyś do zamodelowania
+# szafki, która ma 3 szuflady, a w każdej z nich 3 przegródki?
+# Stwórz taki model i umieść stringa "długopis"
+# w środkowej przegródce środkowej szuflady.
 
+szafka = [[[],[],[]],[[],[],[]],[[],[],[]]]
+# lista szafka zawiera trzy zagnieżdżone listy, a każda z nich kolejne trzy zagnieżdżone listy
 szafka[1][1] = 'długopis'
+# wpisanie stringa do środkowej listy (reprezentującej skrytkę)
+# w środkowej liście (reprezentującej szufladę) w liście szafka
 
-print(szafka)
-
-print("###")
-
-for szuflada in szafka:
-	print(szuflada)
-
-print("###")
-
-# Stwórz listę A, w której znajdują się dwie listy: w pierwszej umieść integery: 1 i 2, w drugiej 3 i 4.
-
-A = [[1, 2], [3, 4]]
-# Zmodyfikuj listę A tak, aby w zagnieżdżonej liście zamiast integera 3 był string 'trzy'.
-A[1][0] = 'trzy'
-# Wydrukuj listę A.
-print(A)
+for a in szafka:       # pętla drukująca po kolei trzy listy będące elementami listy szafka
+    print(a)
