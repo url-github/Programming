@@ -11,6 +11,8 @@ print(1 != True) # False
 print(not (1 is True)) # True
 print(1 is True) # False
 
-not 2 is 2.0 in [0,2]
+not 2 is 2.0 in [0,2] # False
 # (not 2) and (2 is 2.0) and (2.0 in [0,2])
 # (False) and (Fasle) and (True)
+
+# print(2.0 in [0,2])
