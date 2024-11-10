@@ -12,4 +12,4 @@ class Mammal(Animal):
 dog = Mammal()
 
 # Output: Animal Type: Mammal
-#         Mammals give birth directly
+# Mammals give birth directly

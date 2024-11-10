@@ -9,5 +9,5 @@ class Gawron(Zwierze):
         print("Kraaa kraaa!")
 
 g = Gawron()
-g.przedstaw_sie()
-g.daj_glos()
+g.przedstaw_sie() # Jestem jakimś zwierzeciem.
+g.daj_glos() # Kraaa kraaa!
