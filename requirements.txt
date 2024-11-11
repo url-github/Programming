@@ -1,4 +1,5 @@
-pytest
+pytest # testy jednostkowe
+mypy # statyczne typowanie
 matplotlib
 
 # pip install -r requirements.txt
