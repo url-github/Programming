@@ -14,6 +14,9 @@ def przeliteruj(word: str) -> List[str]:  # definicja funkcji, która pobiera ar
 
 print(przeliteruj(1))
 
+# mypy - program, który pozwala analizować kod Pythona pod kątem poprawności przy założeniu statycznego typowania
+# aby go użyć należy w konsoli wpisać: mypy nazwa_pliku_ktory_chcemy_przeanalizoac.pys
+
 # (venv) MacBook-Air-p:043-dynamic-typing p$  mypy main-1.py
 # main-1.py:5: error: Incompatible types in assignment (expression has type "str", variable has type "int")  [assignment]
 # main-1.py:7: error: Incompatible types in assignment (expression has type "list[int]", variable has type "int")  [assignment]
