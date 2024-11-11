@@ -36,16 +36,11 @@ def palindrome(slowo):
 
     while poczatek <= koniec:
         if slowo[poczatek] != slowo[koniec]:
-            return False
+            return print(f"{slowo} nie jest palingromem")
         else:
             poczatek += 1
             koniec -= 1
-    return True
+    return print(f"{slowo} jest palingromem")
 
-print(sprawdz_czy_palindrom("kajak"))
-print(sprawdz_czy_palindrom("anakonda"))
+palindrome("kajakk")
 
-
-slowo = "abcd"
-
-print(slowo[::-1])
