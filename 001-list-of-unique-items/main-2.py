@@ -12,3 +12,9 @@ print(a)
 
 # int, float, bool, str, tuple, frozenset - obiekty niezmienne
 # list, set, dict - obiekty zmienne
+
+x = 5
+print(x)
+print(id(x)) # 4310423184
+x += 1
+print(id(x)) # 4310423216
