@@ -11,6 +11,8 @@ def dodaj_do_listy(n, lista=[]):  # lista=[] - argument domyślny funkcji
 # i zmodyfikowana lista trafi jako argument do kolejnego wywołania funkcji
 # w którym zostanie użyty argument domyślny.
 
-dodaj_do_listy(1)
-dodaj_do_listy(2,[4,5])
-dodaj_do_listy(3) # https://docs.python-guide.org/writing/gotchas/
+dodaj_do_listy(1) # [1]
+dodaj_do_listy(2,[4,5]) # [4, 5, 2]
+dodaj_do_listy(3) # [1, 3]
+
+# https://docs.python-guide.org/writing/gotchas/
