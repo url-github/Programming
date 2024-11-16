@@ -13,7 +13,7 @@ def fibonacci_l(n): # O(n)
         p, d = d, p + d      # jednoczesne aktualizowanie zawartości zmiennych p i d, aby przypisać do nich wartości z poprzedniego obiegu pętli
     return p
 
-print(fibonacci_l(8))
+print(fibonacci_l(20))
 
 
 def fibonacci_r(n): # O(2 ^ n)
