@@ -17,3 +17,4 @@ print(sprawdz_czy_python(a))  # uruchomienie funkcji dla stringa a
 print(sprawdz_czy_python(b))  # uruchomienie funkcji dla stringa b
 
 
+

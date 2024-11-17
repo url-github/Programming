@@ -11,7 +11,7 @@ print(jezyki_odwrocone)      # wydrukuj liste jezyki_odwrocone
 2
 jezyki_odwrocone = list(reversed(jezyki))  # stwórz listę na podstawie obiektu zawierającego odwrócone elementy listy języki i przypisz do języki_odwrócone
 print(jezyki_odwrocone)
-print(jezyki)
+# print(jezyki)
 
 3
 jezyki_odwrocone = jezyki[::-1]            # do zmiennej jezyki_odwrocone przypisz wartosci listy jezyki odczytane od tyłu

@@ -1,6 +1,6 @@
 # Pytanie 8 - Co zostanie wypisane w wyniku wykonania poniższego kodu?
 
-D = {1: 'Ala', 2: 'ma', 3: 'kota'}
+D = {1: 'Ala', 2: 'ma', 4: 'kota'}
 
 for key in D:      # dla kolejnego klucza w słowniku D
     print(D[key])  # wydrukuj wartość słownika przechowywaną pod tym kluczem
