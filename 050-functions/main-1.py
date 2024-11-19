@@ -34,7 +34,7 @@ def PrintAnimal(animal):
 
 # PrintAnimal('cat')
 # PrintAnimal(animal='bear')
-# PrintAnimal(animal='bat')
+PrintAnimal(animal='bat')
 PrintAnimal('unicorn')
 
 
