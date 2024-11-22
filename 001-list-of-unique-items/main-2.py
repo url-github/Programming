@@ -1,6 +1,6 @@
 # Pytanie 2 - co się stanie po wykonaniu poniższego kodu?
 
-a = "abcdefg"            # do zmiennej a przypisz zostaje string 'abcdefg'
+a = "abcdefg"            # do zmiennej a przypisz string 'abcdefg'
 print(a[1])              # wydrukuj element znajdujący się pod indeksem 1 w stringu a
 # a[1] = 'X'             # próba modyfikacji stringa - operacja zabroniona skutkująca TypeError
 
