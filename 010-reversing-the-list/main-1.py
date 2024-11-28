@@ -3,18 +3,18 @@
 
 jezyki = ['Python', 'Java', 'C#', 'Ruby']
 
-1
+# 1
 jezyki.reverse()             # odwróć listę języki (nastąpi nadpisanie wcześniejszej listy)
 jezyki_odwrocone = jezyki    # przypisz wartość listy języki do nowej zmiennej jezyki_odwrocone
 print(jezyki_odwrocone)      # wydrukuj liste jezyki_odwrocone
 
-2
+# 2
 jezyki_odwrocone = list(reversed(jezyki))  # stwórz listę na podstawie obiektu zawierającego odwrócone elementy listy języki i przypisz do języki_odwrócone
 print(jezyki_odwrocone)
 # print(jezyki)
 
-3
-jezyki_odwrocone = jezyki[::-1]            # do zmiennej jezyki_odwrocone przypisz wartosci listy jezyki odczytane od tyłu
+# 3
+jezyki_odwrocone = jezyki[::-1]        # do zmiennej jezyki_odwrocone przypisz wartosci listy jezyki odczytane od tyłu
 print(jezyki_odwrocone)
 
 # 4
