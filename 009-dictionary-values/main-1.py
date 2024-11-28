@@ -10,10 +10,10 @@ print(litery.values())       # wydrukuje obiekt dict_values zawierający wartoś
 print(list(litery.values())) # drukuje listę stworzoną na podstawie obiektu dict_values
 
 
-if 4 in litery.values():     # jeśli 4 znajduje się w sekwencji dict_values
-    print(True)              # wydrukuj True
-else:                        # w przeciwnym wypadku
-    print(False)             # wydrukuj False
+if 3 in list(litery.values()): 	# jeśli 3 znajduje się w sekwencji dict_values
+    print(True)              	# wydrukuj True
+else:                       	# w przeciwnym wypadku
+    print(False)             	# wydrukuj False
 
 print(True if 4 in litery.values() else False)  # wydrukuj True jeśli 4 jest w dict_values, w przeciwnym wypadku False
 
