@@ -5,5 +5,5 @@ def f():
     g = 'teraz jestem lokalna'
     print(g)
 
-f()
-print(g)
+f() # teraz jestem lokalna
+print(g) # teraz jestem lokalna

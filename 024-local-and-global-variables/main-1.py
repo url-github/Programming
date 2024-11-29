@@ -9,4 +9,7 @@ def f():
     print(x, y)
 
 f()                # uruchomienie funkcji wydrukuje zmienną globalną x i zmienna lokalną y
+# 111 12
+
 print(x)           # drukuje zmienną globalną x
+# 111
