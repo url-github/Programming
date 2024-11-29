@@ -13,10 +13,10 @@ L5 = [(x, x+10) for x in L]       # wpisz do listy L5 dwuelementowe tuple, któr
 D1 = {x:x % 2 == 0 for x in L}    # wpisz do słownika D1 pary klucz:wartość, gdzie kluczem są elementy z listy L
                                   # a wartościami True lub False, w zależności od tego czy dany klucz jest podzielny przez 2
 
-print(L1)
-print(L2)
-print(L3)
-print(L4)
-print(L5)
-print(D1)
+print(L1) # [0, 1, 2, 3, 4]
+print(L2) # [1, 4, 9, 16, 25, 36]
+print(L3) # [2, 4, 6]
+print(L4) # ['Parzysta', 'Nieparzysta', 'Parzysta', 'Nieparzysta', 'Parzysta']
+print(L5) # [(1, 11), (2, 12), (3, 13), (4, 14), (5, 15), (6, 16)]
+print(D1) # {1: False, 2: True, 3: False, 4: True, 5: False, 6: True}
 

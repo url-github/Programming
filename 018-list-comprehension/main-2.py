@@ -2,4 +2,4 @@
 
 A1 = [x+1 for x in range(5,11)]
 
-print(A1)
+print(A1) # [6, 7, 8, 9, 10, 11]
