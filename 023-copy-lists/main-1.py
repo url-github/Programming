@@ -7,3 +7,7 @@ B[0] = 111              # zmieniamy pierwszy element listy, na który wskazują 
 print(id(B))            # drukujemy identyfikator obiektu przechowywanego pod zmienną B
 print(id(A))            # drukujemy identyfikator obiektu prezchowywanego pod zmienną A (identyczny jak dla B)
 print(id(C))            # drukujemy identyfikator obiektu przechowywanego pod zmienną C (inny niż dla A i B)
+
+# 4344233408
+# 4344233408
+# 4344553152
