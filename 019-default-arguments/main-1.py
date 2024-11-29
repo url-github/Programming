@@ -5,6 +5,8 @@ def dodaj_do_listy(n, lista=[]):  # lista=[] - argument domyślny funkcji
     lista.append(n)               # dodaj n do końca listy lista
     print(lista)
 
+'''Domyślne wartości argumentów funkcji => lista=[] w Pythonie są obliczane tylko raz w momencie definicji funkcji, a nie za każdym razem, gdy funkcja jest wywoływana.'''
+
 # Argument domyślny, w tym wypadku pusta lista, zostaje utworzona RAZ
 # podczas definiowania funkcji i nie jest tworzona od nowa podczas kolejnych jej wywołań
 # dlatego modyfikacja argumentu domyślnego podczas wywołania funkcji, spowoduje zapisanie tego stanu
