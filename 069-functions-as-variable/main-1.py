@@ -1,7 +1,4 @@
-# How to Create Your Own Class?
+def BuyMe(what):
+	print("Give me", what)
 
-class Cat:
-    def __init__(self, name, color, weight):
-        self.name = name
-        self.color = color
-        self.weight = weight
+BuyMe('a new car')
