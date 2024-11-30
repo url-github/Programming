@@ -13,3 +13,5 @@ def f():                         # definicja funkcji f()
     print("Cześć, jestem f()")
 
 f()
+
+# Dekoratory to funkcje w Pythonie, które pozwalają modyfikować lub rozszerzać zachowanie innych funkcji lub metod bez zmieniania ich kodu. Stosuje się je, by dodać dodatkową logikę do funkcji w łatwy i czytelny sposób. Dekorator przyjmuje funkcję jako argument, wykonuje dodatkowe operacje i zwraca nową funkcję.

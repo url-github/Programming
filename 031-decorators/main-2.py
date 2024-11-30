@@ -11,6 +11,9 @@ def zwroc_czesc():
 
 zwroc_czesc()
 
+# cześć
+# cześć
+
 
 
 
