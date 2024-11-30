@@ -61,7 +61,7 @@ print('-'*30)
 
 def log_it(*args):
 
-    log_file_path = r"/Users/p/Documents/Scripts/Programming/068-args-kwargs/log.txt"
+    log_file_path = r"/Users/p/Documents/Scripts/Programming/068-args-kwargs/log-1.txt"
 
 	# Wszystkie argumenty są konwertowane na ciąg znaków (str), co pozwala na obsługę różnych typów
     log_entry = " ".join(map(str, args)) + "\n"
@@ -69,7 +69,7 @@ def log_it(*args):
     # Użyto trybu "a" (append), aby dopisywać dane do pliku bez nadpisywania istniejącej zawartości.
     with open(log_file_path, mode="a", encoding="utf-8") as file:
         file.write(log_entry)
-        file.write("\n")  
+        file.write("\n")
 
 
 # Test funkcji
