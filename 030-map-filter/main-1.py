@@ -11,6 +11,7 @@ nazwiska = ['jan kot', 18, 'ANNA KRÓL', 'jÓzef BYK', ['nie', 'wasza','sprawa']
 # jeśli tak, to element zostaje dodany do listy nazwiska_wyczyszczone
 nazwiska_wyczyszczone = list(filter(lambda x:type(x) is str, nazwiska))
 print(nazwiska_wyczyszczone)
+# ['jan kot', 'ANNA KRÓL', 'jÓzef BYK', 'ROBERT wąŻ']
 
 # map(funkcja,sekwencja)
 # elementy z listy nazwiska_wyczyszczone przekazane są do lambdy
@@ -19,3 +20,4 @@ print(nazwiska_wyczyszczone)
 # tak zmodyfikowany string zostaje dodany do listy nazwiska_poprawione
 nazwiska_poprawione = list(map(lambda x: x.lower().title(), nazwiska_wyczyszczone))
 print(nazwiska_poprawione)
+# ['Jan Kot', 'Anna Król', 'Józef Byk', 'Robert Wąż']
