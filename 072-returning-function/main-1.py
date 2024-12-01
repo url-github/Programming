@@ -10,8 +10,8 @@ def calculate(kind='+', *args):
 
 print(calculate('+',1,2,3))
 print(calculate('-',1,2,3))
-# 10
-# 60
+# 6
+# -6
 
 print("-"*30)
 
@@ -28,9 +28,8 @@ def f(*args):
 	return f
 
 f_add = create_functions("+")
-print(f_add(1,2,3,4))
-
+print(f_add(1,2,3))
 f_subs = create_functions("-")
-print(f_subs(10,20,30))
-# 10
-# -60
+print(f_subs(1,2,3))
+6
+-6
