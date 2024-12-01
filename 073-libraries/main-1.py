@@ -18,8 +18,6 @@ from selenium import webdriver # Zastosowanie: Automatyzacja przeglądarek inter
 driver = webdriver.Chrome()
 driver.get('https://www.example.com')
 
-scrapy startproject myproject # Zastosowanie: Web scraping.
-
 from bs4 import BeautifulSoup # Zastosowanie: Web scraping.
 import requests
 url = 'https://example.com'
