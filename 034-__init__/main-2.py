@@ -8,6 +8,5 @@ class Kot:
 		self.imie = imie
 		self.kolor = kolor
 
-
 k = Kot("Mruczek", "Szary")
 print(k.imie)
