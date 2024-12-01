@@ -6,19 +6,18 @@ import pandas as pd
 df = pd.DataFrame({'Name': ['Alice', 'Bob'], 'Age': [25, 30]})
 print(df.describe())
 
-import matplotlib.pyplot as plt
-plt.plot([1, 2, 3], [4, 5, 6])
-plt.show()
-
-import requests # Zastosowanie: HTTP API i pobieranie danych z internetu.
+# requests: HTTP API i pobieranie danych z internetu
+import requests
 response = requests.get("https://example.com")
 print(response.text)
 
-from selenium import webdriver # Zastosowanie: Automatyzacja przeglądarek internetowych.
+# selenium: Automatyzacja przeglądarek internetowych
+from selenium import webdriver
 driver = webdriver.Chrome()
 driver.get('https://www.example.com')
 
-from bs4 import BeautifulSoup # Zastosowanie: Web scraping.
+# bs4: Web scraping
+from bs4 import BeautifulSoup
 import requests
 url = 'https://example.com'
 response = requests.get(url)
@@ -27,11 +26,26 @@ titles = soup.find_all('h1')
 for title in titles:
     print(title.text)
 
-from datetime import datetime # Zastosowanie: Standardowa biblioteka do manipulacji datami i czasem.
+# datetime: Standardowa biblioteka do manipulacji datami i czasem
+from datetime import datetime
 now = datetime.now()
 print(now)
 
-from datetime import datetime, timedelta # Zastosowanie: Zawiera funkcje pomocnicze do obliczania różnicy między datami (czas, dni, godziny, minuty).
+# timedelta: Zawiera funkcje pomocnicze do obliczania różnicy między datami (czas, dni, godziny, minuty)
+from datetime import datetime, timedelta
 now = datetime.now()
 future = now + timedelta(days=5)
 print(future)
+
+# pytest: Testy jednostkowe, funkcyjne i integracyjne
+def add(a, b):
+    return a + b
+
+def test_add():
+    assert add(2, 3) == 5
+    assert add(-1, 1) == 0
+
+# mypy: Statyczne typowanie
+def greet(name: str) -> str:
+    return f"Hello, {name}!"
+greet(123)  # Błąd typowania
