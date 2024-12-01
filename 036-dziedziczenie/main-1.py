@@ -17,5 +17,10 @@ class SwinkaMorska(ZwierzeLadowe, ZwierzeMorskie): # klasa SwinkaMorska dzieczic
 
 swinka = SwinkaMorska()      # tworzenie obiektu klasy SwinkaMorska
 swinka.przedstaw_sie()       # wywołanie metody przedstaw_sie odziedziczonej z klasy ZwierzeLadowe
+# Jestem zwierzęciem lądowym.
+
 swinka.biegaj()              # wywołanie metody biegaj odziedziczonej z klasy ZwierzeLadowe
+# Biegam tu i tam.
+
 swinka.plywaj()              # wywołanie metody pływaj odziedziczonej z klasy ZwierzeMorskie
+# Pływam tu i tam.

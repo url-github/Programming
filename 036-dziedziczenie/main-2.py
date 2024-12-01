@@ -1,15 +1,16 @@
-class Animal(object):
-  def __init__(self, animal_type):
-    print('Animal Type:', animal_type)
+class Zwierze:
+    def przedstaw_sie(self):
+        print("Jestem jakimś zwierzeciem.")
+    def daj_glos(self):
+        print("Nie wiem czym jestem i jaki dźwięk wydaję.")
 
-class Mammal(Animal):
-  def __init__(self):
+class Gawron(Zwierze):
+    def daj_glos(self):
+        print("Kraaa kraaa!")
 
-    # call superclass
-    super().__init__('Mammal')
-    print('Mammals give birth directly')
+g = Gawron()
+g.przedstaw_sie()
+# Jestem jakimś zwierzeciem.
 
-dog = Mammal()
-
-# Output: Animal Type: Mammal
-# Mammals give birth directly
+g.daj_glos()
+# Kraaa kraaa!
