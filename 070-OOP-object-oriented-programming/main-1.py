@@ -53,3 +53,58 @@ print(f"Email: {user.email}")
 # Email: john.new@example.com
 print(f"Age: {user.age}")
 # Age: 30
+
+print("\nMetoda str")
+class Video:
+    def __init__(self, title, duration, resolution):
+        self.title = title
+        self.duration = duration
+        self.resolution = resolution
+
+    def __str__(self):
+        return f"Video Title: {self.title}, Duration: {self.duration} minutes, Resolution: {self.resolution}"
+
+video_instance = Video("Python Basics", 45, "1080p")
+print(video_instance)
+# Video Title: Python Basics, Duration: 45 minutes, Resolution: 1080p
+
+print("\nDziedziczenie")
+class Publication:
+    def __init__(self, title):
+        self.title = title
+
+    def print_title(self):
+        print(f"Title: {self.title}")
+
+class Article(Publication):
+    pass
+
+article = Article("Inheritance in Python")
+print(article)
+# <__main__.Article object at 0x102d37490>
+article.print_title()
+# Title: Inheritance in Python
+
+print("\nPrzodkowie i potomkowie")
+class Product:
+    def __init__(self, name):
+        self.name = name
+
+    def describe(self):
+        pass
+
+class Electronics(Product):
+    def describe(self):
+        print("This is an electronic product.")
+
+class Clothing(Product):
+    def describe(self):
+        print("This is a clothing product.")
+
+phone = Electronics("Smartphone")
+shirt = Clothing("T-shirt")
+
+phone.describe()
+# This is an electronic product.
+shirt.describe()
+# This is a clothing product.
