@@ -49,12 +49,10 @@ def create_time_span_function(divisor):
         return divmod(duration_in_s, divisor)[0]
     return time_span
 
-# Tworzenie funkcji dla minut, godzin i dni
 f_minutes = create_time_span_function(60)
 f_hours = create_time_span_function(3600)
 f_days = create_time_span_function(86400)
 
-# Testy funkcji
 start = datetime(2024, 1, 1, 0, 0, 0)
 end = datetime.now()
 
