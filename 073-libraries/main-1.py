@@ -49,3 +49,8 @@ def test_add():
 def greet(name: str) -> str:
     return f"Hello, {name}!"
 greet(123)  # Błąd typowania
+
+# os: zapewnia funkcje do interakcji z systemem operacyjnym
+import os
+print(os.listdir(r"/Users/p/Documents/Scripts/Programming/040-recursively-listing-the-contents-of-a-directory/testowy"))
+# ['b.txt', 'a.txt', 'zagniezdzony']
