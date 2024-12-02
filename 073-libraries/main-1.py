@@ -45,7 +45,18 @@ def test_add():
     assert add(2, 3) == 5
     assert add(-1, 1) == 0
 
+# typing: Statyczne typowanie
+# Moduł standardowy w Pythonie, służący do dodawania adnotacji typów w kodzie. 
+from typing import List
+
+def add_numbers(numbers: List[int]) -> int:
+    return sum(numbers)
+
+print(add_numbers([1, 2, 3]))  # Poprawne
+# print(add_numbers(["a", "b"]))  # Błąd wykrywany przez narzędzia analizy statycznej
+
 # mypy: Statyczne typowanie
+# Narzędzie zewnętrzne do analizy statycznej kodu Pythona. Wykorzystuje adnotacje typów (dodane np. za pomocą modułu typing) i sprawdza, czy kod jest zgodny z zadeklarowanymi typami.
 def greet(name: str) -> str:
     return f"Hello, {name}!"
 greet(123)  # Błąd typowania
