@@ -3,7 +3,7 @@
 
 # os.listdir - zwraca zawartość danego katalogu
 # os.path.join - łączy dwa stringi w ścieżkę czytelną dla danego systemu operacyjnego
-# os.path.isdir - sprawdza czy pod nadą ściezką znajduje się katalog
+# os.path.isdir - sprawdza czy pod wskazaną ściezką znajduje się katalog
 import os
 
 def wypisz_zawartosc_katalogu(sciezka_do_katalogu):
