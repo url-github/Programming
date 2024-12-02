@@ -31,6 +31,9 @@ from datetime import datetime
 now = datetime.now()
 print(now)
 
+# time: 
+import time
+
 # timedelta: Zawiera funkcje pomocnicze do obliczania różnicy między datami (czas, dni, godziny, minuty)
 from datetime import datetime, timedelta
 now = datetime.now()
@@ -46,7 +49,7 @@ def test_add():
     assert add(-1, 1) == 0
 
 # typing: Statyczne typowanie
-# Moduł standardowy w Pythonie, służący do dodawania adnotacji typów w kodzie. 
+# Moduł standardowy w Pythonie, służący do dodawania adnotacji typów w kodzie.
 from typing import List
 
 def add_numbers(numbers: List[int]) -> int:
