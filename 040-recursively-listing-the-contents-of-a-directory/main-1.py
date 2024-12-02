@@ -15,5 +15,9 @@ def wypisz_zawartosc_katalogu(sciezka_do_katalogu):
         else:                                              # w przeciwnym wypadku (czyli element nie jest katalogiem)
             print(sciezka_do_elementu)                     # wypisz element
 
-wypisz_zawartosc_katalogu(r"/Users/p/Documents/VSC/Programming/040-recursively-listing-the-contents-of-a-directory/testowy")
+wypisz_zawartosc_katalogu(r"/Users/p/Documents/Scripts/Programming/040-recursively-listing-the-contents-of-a-directory/testowy")
 
+# /Users/p/Documents/Scripts/Programming/040-recursively-listing-the-contents-of-a-directory/testowy/b.txt
+# /Users/p/Documents/Scripts/Programming/040-recursively-listing-the-contents-of-a-directory/testowy/a.txt
+# /Users/p/Documents/Scripts/Programming/040-recursively-listing-the-contents-of-a-directory/testowy/zagniezdzony/c.txt
+# /Users/p/Documents/Scripts/Programming/040-recursively-listing-the-contents-of-a-directory/testowy/zagniezdzony/d.txt
