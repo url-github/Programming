@@ -78,3 +78,6 @@ print(random.random())
 print(random.randint(10, 20))
 # Liczba zmiennoprzecinkowa z zakresu [10.5, 20.5]
 print(random.uniform(10.5, 20.5))
+
+# functools: Moduł functools w Pythonie zawiera narzędzia do pracy z funkcjami i metodami
+import functools
