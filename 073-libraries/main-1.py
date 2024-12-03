@@ -69,3 +69,12 @@ greet(123)  # Błąd typowania
 import os
 print(os.listdir(r"/Users/p/Documents/Scripts/Programming/040-recursively-listing-the-contents-of-a-directory/testowy"))
 # ['b.txt', 'a.txt', 'zagniezdzony']
+
+# random: Generowanie liczb losowych
+import random
+# Liczba zmiennoprzecinkowa z zakresu [0.0, 1.0)
+print(random.random())
+# Liczba całkowita z zakresu [10, 20]
+print(random.randint(10, 20))
+# Liczba zmiennoprzecinkowa z zakresu [10.5, 20.5]
+print(random.uniform(10.5, 20.5))

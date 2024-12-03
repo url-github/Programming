@@ -6,7 +6,7 @@ capital = initialCapital
 while year<maxTimeYears:
     year+=1
     capital=round((1+percent)*capital,2)
-    print('after this year:', year,  'you will have:',capital)
+    print('after this year:', year, 'you will have:', capital)
 else:
     print('the total revenue is', capital-initialCapital)
 
