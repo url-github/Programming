@@ -31,7 +31,8 @@ from datetime import datetime
 now = datetime.now()
 print(now)
 
-# time: 
+# time:
+
 import time
 
 # timedelta: Zawiera funkcje pomocnicze do obliczania różnicy między datami (czas, dni, godziny, minuty)

@@ -1,5 +1,6 @@
-pytest # testy jednostkowe
-mypy # statyczne typowanie
+pytest # pytest: Testy jednostkowe, funkcyjne i integracyjne
+mypy # mypy: Statyczne typowanie
 matplotlib
+requests
 
 # pip install -r requirements.txt
