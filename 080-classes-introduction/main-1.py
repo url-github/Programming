@@ -1,3 +1,6 @@
+# 1. Programowanie proceduralne
+# Skupia się na podziale programu na funkcje i instrukcje wykonywane sekwencyjnie.
+
 car_01 = {
 'carBrand':'Seat',
 'carModel':'Ibiza',

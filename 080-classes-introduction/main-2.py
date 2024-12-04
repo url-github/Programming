@@ -1,3 +1,6 @@
+# 1. Programowanie proceduralne
+# Skupia się na podziale programu na funkcje i instrukcje wykonywane sekwencyjnie.
+
 cake_01 = {
     'taste': 'vanilia',
     'glaze': 'chocolade',
