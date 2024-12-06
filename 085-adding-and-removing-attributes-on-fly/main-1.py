@@ -34,8 +34,8 @@ class Samochod:
 samochod_01 = Samochod('Seat', 'Ibiza', True, True, True, False)  # Instancja klasy Samochod; obiekt Samochod
 samochod_02 = Samochod('Opel', 'Astra', True, False, True, True)
 
-samochod_02.czyNaSprzedaz = False # W ten sposób nie nadpiszę ukryty atrybut
-samochod_02.__czyNaSprzedaz = False # W ten sposób nie nadpiszę ukryty atrybut
+samochod_02.czyNaSprzedaz = False # W ten sposób nie nadpiszę ukrytego atrybututu
+samochod_02.__czyNaSprzedaz = False # W ten sposób nie nadpiszę ukrytytego atrybututu, tylko utworzę nowy.
 samochod_02._Samochod__czyNaSprzedaz = False # W ten sposób nadpiszę ukryty atrybut !!!
 
 samochod_02.pokazInformacje()
