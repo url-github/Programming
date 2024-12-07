@@ -1,17 +1,17 @@
-'''Getter i Setter to metody w programowaniu obiektowym używane do:
-- uzyskiwania dostępu do prywatnych atrybutów klasy (getter)
-- oraz zmiany ich wartości (setter).
-Są one stosowane, aby lepiej kontrolować dostęp do atrybutów obiektów i zapewnić enkapsulację.'''
+# Getter i Setter to metody w programowaniu obiektowym używane do:
+# - uzyskiwania dostępu do prywatnych atrybutów klasy (getter)
+# - oraz zmiany ich wartości (setter).
+# Są one stosowane, aby lepiej kontrolować dostęp do atrybutów obiektów i zapewnić enkapsulację.
 
-markaNaSprzedaz = 'Opel'
+markaNaPromocji = 'Opel'
 
 class Samochod:
-    liczbaSamochodow = 0  # Atrybuty klasy
-    listaSamochodow = []  # Atrybuty klasy
+    liczbaSamochodow = 0  # Atrybut klasy
+    listaSamochodow = []  # Atrybut klasy
 
     def __init__(self, marka, model, czyPoduszkaOK, czyLakierOK, czyMechanikaOK, czyNaSprzedaz):
         # Metoda inicjalizująca obiekt klasy Samochod
-        self.marka = marka  # Atrybuty lub właściwości klasy Samochod
+        self.marka = marka  # Atrybuty lub właściwości obiektu
         self.model = model
         self.czyPoduszkaOK = czyPoduszkaOK
         self.czyLakierOK = czyLakierOK
@@ -26,35 +26,51 @@ class Samochod:
 
     def pokazInformacje(self):
         # Metoda wyświetlająca informacje o samochodzie
-        print("{} {}".format(self.marka, self.model).upper())
-        print("Poduszka powietrzna - OK - {}".format(self.czyPoduszkaOK))
-        print("Lakier - OK - {}".format(self.czyLakierOK))
-        print("Mechanika - OK - {}".format(self.czyMechanikaOK))
-        print("NA SPRZEDAŻ - {}".format(self.__czyNaSprzedaz))
+        print(f"{self.marka} {self.model}".upper())
+        print(f"Poduszka powietrzna - OK - {self.czyPoduszkaOK}")
+        print(f"Lakier - OK - {self.czyLakierOK}")
+        print(f"Mechanika - OK - {self.czyMechanikaOK}")
+        print(f"NA SPRZEDAŻ - {self.__czyNaSprzedaz}")
         print("-------------------")
 
-    def GetIsOnSale(self):
-        # Getter dla atrybutu __czyNaSprzedaz
+    # Getter dla atrybutu __czyNaSprzedaz
+    def pobierzCzyNaSprzedaz(self):
         return self.__czyNaSprzedaz
 
-    def SetIsOnSale(self, newIsOnSaleStatus):
-        # Setter dla atrybutu __czyNaSprzedaz
-        if self.marka == markaNaSprzedaz:
-            self.__czyNaSprzedaz = newIsOnSaleStatus
-            print("Changing status IsOnSale to {} for {}".format(newIsOnSaleStatus, self.marka))
+    # Setter dla atrybutu __czyNaSprzedaz
+    def ustawCzyNaSprzedaz(self, nowyStatusNaSprzedaz):
+        if self.marka == markaNaPromocji:
+            self.__czyNaSprzedaz = nowyStatusNaSprzedaz
+            print(f"Zmieniono status CzyNaSprzedaz na {nowyStatusNaSprzedaz} dla {self.marka}")
         else:
-            print("Cannot change status IsOnSale. Sale valid only for {}".format(markaNaSprzedaz))
+            print(f"Nie można zmienić statusu CzyNaSprzedaz. Promocja dotyczy tylko marki {markaNaPromocji}.")
 
+    # Właściwość property dla __czyNaSprzedaz
+    czyNaSprzedaz = property(pobierzCzyNaSprzedaz, ustawCzyNaSprzedaz, None, 'Status sprzedaży')
 
 # Tworzenie instancji klasy Samochod
 samochod_01 = Samochod('Seat', 'Ibiza', True, True, True, False)
 samochod_02 = Samochod('Opel', 'Astra', True, False, True, True)
 
 # Wyświetlenie początkowego statusu
-print("Status of cars:", samochod_01.GetIsOnSale(), samochod_02.GetIsOnSale())
-samochod_01.SetIsOnSale(True)
-samochod_02.SetIsOnSale(False)
+print("Początkowy status samochodów:")
+print("Seat:", samochod_01.czyNaSprzedaz)
+print("Opel:", samochod_02.czyNaSprzedaz)
+
+# Zmiana statusu sprzedaży
+samochod_01.czyNaSprzedaz = True  # Niepowodzenie, marka nie jest objęta promocją
+samochod_02.czyNaSprzedaz = False  # Sukces, zmiana statusu dla marki Opel
+
 # Wyświetlenie końcowego statusu
-print("Status of cars:", samochod_01.GetIsOnSale(), samochod_02.GetIsOnSale())
+print("Końcowy status samochodów:")
+print("Seat:", samochod_01.czyNaSprzedaz)
+print("Opel:", samochod_02.czyNaSprzedaz)
 
-
+# Początkowy status samochodów:
+# Seat: False
+# Opel: True
+# Nie można zmienić statusu CzyNaSprzedaz. Promocja dotyczy tylko marki Opel.
+# Zmieniono status CzyNaSprzedaz na False dla Opel
+# Końcowy status samochodów:
+# Seat: False
+# Opel: False

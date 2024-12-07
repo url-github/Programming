@@ -1,76 +1,152 @@
-# Getter i Setter to metody w programowaniu obiektowym używane do:
-# - uzyskiwania dostępu do prywatnych atrybutów klasy (getter)
-# - oraz zmiany ich wartości (setter).
-# Są one stosowane, aby lepiej kontrolować dostęp do atrybutów obiektów i zapewnić enkapsulację.
+'''LAB - Właściwości klasy
+W tym LAB pracujemy z klasą z poprzedniej lekcji (jeśli nie masz rozwiązania skopiuj sobie moją propozycję rozwiązania z poprzedniej lekcji)
 
-markaNaPromocji = 'Opel'
+Do klasy należy dodać atrybut ukryty __text. Odpowiada on za napis umieszczony na torcie.
 
-class Samochod:
-    liczbaSamochodow = 0  # Atrybut klasy
-    listaSamochodow = []  # Atrybut klasy
+W funkcji __init__ przyjmij nowy argument text
 
-    def __init__(self, marka, model, czyPoduszkaOK, czyLakierOK, czyMechanikaOK, czyNaSprzedaz):
-        # Metoda inicjalizująca obiekt klasy Samochod
-        self.marka = marka  # Atrybuty lub właściwości obiektu
-        self.model = model
-        self.czyPoduszkaOK = czyPoduszkaOK
-        self.czyLakierOK = czyLakierOK
-        self.czyMechanikaOK = czyMechanikaOK
-        self.__czyNaSprzedaz = czyNaSprzedaz  # Ukryty atrybut
-        Samochod.liczbaSamochodow += 1
-        Samochod.listaSamochodow.append(self)
+Zapisz go w zmiennej __text przeprowadzając kontrolę: napis można zapisać w instancji tylko jeżeli kind jest 'cake' lub text jest napisem pustym. Jeśli te warunki nie są spełnione wyświetl diagnostyczny komunikat (print dla Ciebie, żeby było wiadomo co się dzieje)
 
-    def czyUszkodzony(self):
-        # Metoda sprawdzająca, czy samochód jest uszkodzony
-        return not (self.czyPoduszkaOK and self.czyMechanikaOK and self.czyLakierOK)
+Dodaj ukrytą funkcję __get_text, która będzie zwracać wartość zapisaną w __text
 
-    def pokazInformacje(self):
-        # Metoda wyświetlająca informacje o samochodzie
-        print(f"{self.marka} {self.model}".upper())
-        print(f"Poduszka powietrzna - OK - {self.czyPoduszkaOK}")
-        print(f"Lakier - OK - {self.czyLakierOK}")
-        print(f"Mechanika - OK - {self.czyMechanikaOK}")
-        print(f"NA SPRZEDAŻ - {self.__czyNaSprzedaz}")
-        print("-------------------")
+Dodaj ukrytą funkcje __set_text, która przyjmie dodatkowy argument new_text i zaktualizuje atrybut __text tylko dla wyrobów z kind 'cake'
 
-    # Getter dla atrybutu __czyNaSprzedaz
-    def pobierzCzyNaSprzedaz(self):
-        return self.__czyNaSprzedaz
+Zdefiniuj właściwość Text korzystającą z powyższych funkcji.
 
-    # Setter dla atrybutu __czyNaSprzedaz
-    def ustawCzyNaSprzedaz(self, nowyStatusNaSprzedaz):
-        if self.marka == markaNaPromocji:
-            self.__czyNaSprzedaz = nowyStatusNaSprzedaz
-            print(f"Zmieniono status CzyNaSprzedaz na {nowyStatusNaSprzedaz} dla {self.marka}")
+Tworząc obiekty klasy Cake przekaż dodatkowy argument text - umieść napisy puste lub inne typowo  "tortowe", część poprawnych (czyli napis na torcie) i część niepoprawnych (np. napis na waflu)
+
+Wyświetl wszystkie informacje o wszystkich wypiekach
+
+Spróbuj wstawić do właściwości Text napis na torcie i na innym wypieku nietortowym - prześledź poprawność tych operacji ponownie wyświetlając ofertę cukierni'''
+
+class Cake:
+    # Atrybuty klasy
+    bakery_offer = []
+
+    def __init__(self, name, kind, taste, additives, filling, text):
+        # Inicjalizacja atrybutów instancji
+        self.name = name  # Nazwa wypieku
+        self.kind = kind  # Rodzaj wypieku (np. tort, ciastko)
+        self.taste = taste  # Smak wypieku
+        self.additives = additives  # Dodatki do wypieku
+        self.filling = filling  # Nadzienie
+        self.__text = ''  # Ukryty atrybut na napis
+
+        # Sprawdzanie poprawności dla text
+        if kind == 'cake' or text == '':
+            self.__text = text
         else:
-            print(f"Nie można zmienić statusu CzyNaSprzedaz. Promocja dotyczy tylko marki {markaNaPromocji}.")
+            print(f"Nie można ustawić napisu '{text}' na wypieku '{kind}'.")
 
-    # Właściwość property dla __czyNaSprzedaz
-    czyNaSprzedaz = property(pobierzCzyNaSprzedaz, ustawCzyNaSprzedaz, None, 'Status sprzedaży')
+        Cake.bakery_offer.append(self)
 
-# Tworzenie instancji klasy Samochod
-samochod_01 = Samochod('Seat', 'Ibiza', True, True, True, False)
-samochod_02 = Samochod('Opel', 'Astra', True, False, True, True)
+    def show_info(self):
+        # Wyświetlenie informacji o wypieku
+        print(f"Nazwa: {self.name}")
+        print(f"Rodzaj: {self.kind}")
+        print(f"Smak: {self.taste}")
+        print(f"Dodatki: {', '.join(self.additives) if self.additives else 'Brak'}")
+        print(f"Nadzienie: {self.filling if self.filling else 'Brak'}")
+        print(f"Napis na torcie: '{self.__text}'")
+        print('-' * 20)
 
-# Wyświetlenie początkowego statusu
-print("Początkowy status samochodów:")
-print("Seat:", samochod_01.czyNaSprzedaz)
-print("Opel:", samochod_02.czyNaSprzedaz)
+    # Ukryta metoda getter dla atrybutu __text
+    def __get_text(self):
+        return self.__text
 
-# Zmiana statusu sprzedaży
-samochod_01.czyNaSprzedaz = True  # Niepowodzenie, marka nie jest objęta promocją
-samochod_02.czyNaSprzedaz = False  # Sukces, zmiana statusu dla marki Opel
+    # Ukryta metoda setter dla atrybutu __text
+    def __set_text(self, new_text):
+        if self.kind == 'cake':
+            self.__text = new_text
+            print(f"Zmieniono napis na torcie '{self.name}' na '{new_text}'.")
+        else:
+            print(f"Nie można ustawić napisu '{new_text}' na wypieku '{self.kind}'.")
 
-# Wyświetlenie końcowego statusu
-print("Końcowy status samochodów:")
-print("Seat:", samochod_01.czyNaSprzedaz)
-print("Opel:", samochod_02.czyNaSprzedaz)
+    # Właściwość dla atrybutu __text
+    Text = property(__get_text, __set_text, None, 'Właściwość dla napisu na torcie.')
 
-# Początkowy status samochodów:
-# Seat: False
-# Opel: True
-# Nie można zmienić statusu CzyNaSprzedaz. Promocja dotyczy tylko marki Opel.
-# Zmieniono status CzyNaSprzedaz na False dla Opel
-# Końcowy status samochodów:
-# Seat: False
-# Opel: False
+# Tworzenie obiektów klasy Cake
+cake_01 = Cake('Tort Czekoladowy', 'cake', 'czekoladowy', ['orzechy', 'posypka'], 'krem waniliowy', 'Wszystkiego najlepszego')
+cake_02 = Cake('Ciastko z Kremem', 'cookie', 'waniliowe', [], '', '')
+cake_03 = Cake('Tort Owocowy', 'cake', 'truskawkowy', ['truskawki', 'bita śmietana'], 'dżem truskawkowy', 'Sto lat!')
+cake_04 = Cake('Wafel z Czekoladą', 'waffle', 'czekoladowy', [], '', 'Smacznego!')
+
+# Wyświetlenie początkowych informacji o wypiekach
+print("Początkowa oferta cukierni:")
+for cake in Cake.bakery_offer:
+    cake.show_info()
+
+# Próba zmiany napisu na torcie i innych wypiekach
+cake_01.Text = 'Najlepszego!'
+cake_02.Text = 'Smacznego!'
+cake_03.Text = 'Dla Ciebie'
+cake_04.Text = 'Pyszności'
+
+# Wyświetlenie końcowych informacji o wypiekach
+print("Końcowa oferta cukierni:")
+for cake in Cake.bakery_offer:
+    cake.show_info()
+
+# Nie można ustawić napisu 'Smacznego!' na wypieku 'waffle'.
+# Początkowa oferta cukierni:
+# Nazwa: Tort Czekoladowy
+# Rodzaj: cake
+# Smak: czekoladowy
+# Dodatki: orzechy, posypka
+# Nadzienie: krem waniliowy
+# Napis na torcie: 'Wszystkiego najlepszego'
+# --------------------
+# Nazwa: Ciastko z Kremem
+# Rodzaj: cookie
+# Smak: waniliowe
+# Dodatki: Brak
+# Nadzienie: Brak
+# Napis na torcie: ''
+# --------------------
+# Nazwa: Tort Owocowy
+# Rodzaj: cake
+# Smak: truskawkowy
+# Dodatki: truskawki, bita śmietana
+# Nadzienie: dżem truskawkowy
+# Napis na torcie: 'Sto lat!'
+# --------------------
+# Nazwa: Wafel z Czekoladą
+# Rodzaj: waffle
+# Smak: czekoladowy
+# Dodatki: Brak
+# Nadzienie: Brak
+# Napis na torcie: ''
+# --------------------
+# Zmieniono napis na torcie 'Tort Czekoladowy' na 'Najlepszego!'.
+# Nie można ustawić napisu 'Smacznego!' na wypieku 'cookie'.
+# Zmieniono napis na torcie 'Tort Owocowy' na 'Dla Ciebie'.
+# Nie można ustawić napisu 'Pyszności' na wypieku 'waffle'.
+# Końcowa oferta cukierni:
+# Nazwa: Tort Czekoladowy
+# Rodzaj: cake
+# Smak: czekoladowy
+# Dodatki: orzechy, posypka
+# Nadzienie: krem waniliowy
+# Napis na torcie: 'Najlepszego!'
+# --------------------
+# Nazwa: Ciastko z Kremem
+# Rodzaj: cookie
+# Smak: waniliowe
+# Dodatki: Brak
+# Nadzienie: Brak
+# Napis na torcie: ''
+# --------------------
+# Nazwa: Tort Owocowy
+# Rodzaj: cake
+# Smak: truskawkowy
+# Dodatki: truskawki, bita śmietana
+# Nadzienie: dżem truskawkowy
+# Napis na torcie: 'Dla Ciebie'
+# --------------------
+# Nazwa: Wafel z Czekoladą
+# Rodzaj: waffle
+# Smak: czekoladowy
+# Dodatki: Brak
+# Nadzienie: Brak
+# Napis na torcie: ''
+# --------------------
