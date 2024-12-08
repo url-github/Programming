@@ -81,3 +81,10 @@ print(random.uniform(10.5, 20.5))
 
 # functools: Moduł functools w Pythonie zawiera narzędzia do pracy z funkcjami i metodami
 import functools
+
+# pickle: Umożliwia serializację (zapis) i deserializację (odczyt) obiektów Python do/z plików binarnych
+import pickle
+
+# glob: Umożliwia wyszukiwanie plików i katalogów pasujących do określonego wzorca (ang. pattern matching).
+import glob
+
