@@ -11,13 +11,13 @@ class Samochod:
 
     def __init__(self, marka, model, czyPoduszkaOK, czyLakierOK, czyMechanikaOK, czyNaSprzedaz):
         # Metoda inicjalizująca obiekt klasy Samochod
-        self.marka = marka  # Atrybuty lub właściwości obiektu
+        self.marka = marka # Atrybuty lub właściwości obiektu
         self.model = model
         self.czyPoduszkaOK = czyPoduszkaOK
         self.czyLakierOK = czyLakierOK
         self.czyMechanikaOK = czyMechanikaOK
         self.__czyNaSprzedaz = czyNaSprzedaz  # Ukryty atrybut
-        Samochod.liczbaSamochodow += 1
+        Samochod.liczbaSamochodow += 1 # Jest to atrybut do klasy Samochod, a nie do konkretnej instancji (obiektu). Oznacza to, że wartość tego atrybutu jest wspólna dla wszystkich obiektów klasy.
         Samochod.listaSamochodow.append(self)
 
     def czyUszkodzony(self):
