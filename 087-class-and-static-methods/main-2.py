@@ -11,8 +11,8 @@ class Cake:
         self.additives = additives
         self.filling = filling
         self.gluten_free = gluten_free
-        self.text = text
-        Cake.bakery_offer.append(self)
+        self.text = text # Atrybut instancji
+        Cake.bakery_offer.append(self) # Atrybut klasy
 
     def show_info(self):
         """Wyświetla szczegółowe informacje o cieście."""
@@ -42,22 +42,25 @@ class Cake:
 
     @staticmethod
     def get_bakery_files(directory):
-        """Zwraca listę plików z rozszerzeniem .bakery w podanym katalogu."""
-        return glob.glob(f"{directory}/*.bakery")
+        """Zwraca listę plików z rozszerzeniem .pkl w podanym katalogu."""
+        return glob.glob(f"{directory}/*.pkl")
 
 
 # Tworzenie obiektów
 cake01 = Cake('Vanilla Cake', 'cake', 'vanilla', ['chocolate chips'], 'cream', False, 'Happy Birthday')
 cake02 = Cake('Chocolate Muffin', 'muffin', 'chocolate', [], None, True, '')
 
-# Testowanie zapisu do plików
-cake01.save_to_file('vanilla_cake.bakery')
-cake02.save_to_file('chocolate_muffin.bakery')
+# Ścieżka do katalogu zapisu
+base_dir = '/Users/p/Documents/Scripts/Programming/087-class-and-static-methods'
+
+# Testowanie zapisu do plików z rozszerzeniem .pkl
+cake01.save_to_file(f'{base_dir}/vanilla_cake.pkl')
+cake02.save_to_file(f'{base_dir}/chocolate_muffin.pkl')
 
 # Testowanie odczytu z pliku
-cake05 = Cake.read_from_file('vanilla_cake.bakery')
+cake05 = Cake.read_from_file(f'{base_dir}/vanilla_cake.pkl')
 cake05.show_info()
 
-# Testowanie funkcji statycznej do pobierania plików
-bakery_files = Cake.get_bakery_files('.')
+# Testowanie funkcji statycznej do pobierania plików z rozszerzeniem .pkl
+bakery_files = Cake.get_bakery_files(base_dir)
 print("Bakery files:", bakery_files)
