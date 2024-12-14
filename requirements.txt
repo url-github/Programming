@@ -2,5 +2,7 @@ pytest # pytest: Testy jednostkowe, funkcyjne i integracyjne
 mypy # mypy: Statyczne typowanie
 matplotlib
 requests
+# pandas
 
-# pip install -r requirements.txt
+# python3 -m pip install -r requirements.txt
+# python3 pip install --upgrade pip
