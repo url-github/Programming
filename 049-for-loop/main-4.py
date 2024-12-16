@@ -14,6 +14,7 @@ for word in words:
         print(short_text)
         break
 
+# Mechanical advantage is a measure of the force amplification achieved
 print('------------------------')
 
 
@@ -38,3 +39,8 @@ for definition in definitions:
         if counter>=10:
             print(short_text)
             break
+
+# Mechanical advantage is a measure of the force amplification achieved
+# Ein Kraftwandler ist eine mechanische Anordnung zur Veränderung einer Kraft
+# La ventaja mecánica es una magnitud adimensional que indica cuánto
+# Cette notion s'applique de manière évidente dans les systèmes de
