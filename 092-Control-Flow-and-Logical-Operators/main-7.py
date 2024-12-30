@@ -21,6 +21,6 @@ if kierunek == "lewo":
     else:
         print("Zostałeś zaatakowany przez pstrągi. Koniec gry.")
 else:
-    print("Koniec gry.")
+    print("Fall into a hole.\nKoniec gry.")
 
 print("Koniec programu.")
