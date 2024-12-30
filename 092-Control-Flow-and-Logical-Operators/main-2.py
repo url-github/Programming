@@ -1,5 +1,6 @@
 wzrost = 130
 lat = 16
+bilet = True
 
 
 if wzrost > 120:
@@ -12,7 +13,4 @@ if wzrost > 120:
 		print("Płacisz 10")
 else:
 	print("Za niski na rollercoaster.")
-
-# The output will be:
-# Jedziesz na rollercoasterze!
 
