@@ -13,3 +13,15 @@ if l == 1:
 else:
 	print(f'Wylosowano {l} -> reszka')
 
+
+
+print(1 % 3)	# 1
+print(2 % 3)	# 2
+print(3 % 3)	# 0
+print(4 % 3)	# 1
+print(5 % 3)	# 2
+
+result = 1, 2	# Tuple
+print(result)
+
+result == (1, 2) # True
