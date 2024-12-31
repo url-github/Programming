@@ -24,5 +24,10 @@ eazy_passwords = "".join(passwords)
 print(f"To jest proste hasło: {eazy_passwords}")
 
 r.shuffle(passwords)
-hard_password = "".join(passwords)
+
+hard_password = ""
+for znak in passwords:
+  hard_password += znak
+
+# hard_password = "".join(passwords)
 print(f"To jest trudne hasło: {hard_password}")
